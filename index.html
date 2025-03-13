@@ -2,91 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stated Real Estate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>STATED. | Real Estate</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Font Awesome for icons -->
+  <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/95dc93da07.js" crossorigin="anonymous"></script>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Inline Custom CSS + Animations -->
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    h2 {
+      font-weight: 700;
+    }
+
+    /* Hero animation */
+    #hero {
+      animation: fadeInDown 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card hover effect */
+    .card:hover {
+      transform: translateY(-10px);
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Carousel fade-in */
+    .carousel-inner {
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    /* Modal zoom effect */
+    .modal-content {
+      animation: zoomIn 0.3s ease-in-out;
+    }
+
+    @keyframes zoomIn {
+      from {transform: scale(0.8); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+
+    /* Subscribe button hover */
+    .btn-outline-light:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    footer p {
+      margin-bottom: 0;
+    }
+
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">STATED.</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navContent">
-        <ul class="navbar-nav ms-auto">
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="properties.html">Properties</a></li>
           <li class="nav-item"><a class="nav-link" href="agents.html">Agents</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="text-white text-center d-flex align-items-center justify-content-center" style="background: url('https://onclickwebdesign.com/wp-content/uploads/hero_bg.jpg') center/cover no-repeat; height: 90vh;">
-    <div class="container hero-content animate__animated animate__fadeInDown">
+  <section id="hero" class="bg-dark text-white text-center py-5 mt-5">
+    <div class="container">
       <h1 class="display-4 fw-bold">Buy and Sell Real Estate Properties</h1>
-      <p class="lead">The best website to market and buy your next dream house.</p>
+      <p class="lead">The best platform to market and buy your next dream house.</p>
     </div>
   </section>
 
-  <!-- Properties Section with Carousel -->
+  <!-- Properties Carousel -->
   <section id="properties" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4">Featured Properties</h2>
-      <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel" style="height: 400px;">
+
+      <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://via.placeholder.com/800x400?text=Property+1" class="d-block w-100 rounded" alt="Property 1" style="object-fit: cover; height: 400px;">
-            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
-              <h5>$3,400,000 · 6 Beds · 4 Baths · 4,250 sqft</h5>
+            <img src="https://img.freepik.com/free-photo/3d-electric-car-building_23-2148972401.jpg?ga=GA1.1.497281543.1719219319&semt=ais_authors_boost" class="d-block w-100 rounded" alt="Property 1">
+            <div class="carousel-caption d-none d-md-block p-3">
+              <h5>$3,400,000 - 6 Beds, 4 Baths, 4250 sqft</h5>
               <p>480 12th, Unit 14, San Francisco, CA</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://via.placeholder.com/800x400?text=Property+2" class="d-block w-100 rounded" alt="Property 2" style="object-fit: cover; height: 400px;">
-            <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
-              <h5>$3,200,000 · 5 Beds · 3 Baths · 3,800 sqft</h5>
-              <p>221B Baker St, San Francisco, CA</p>
+            <img src="https://img.freepik.com/free-photo/house-isolated-field_1303-23773.jpg?ga=GA1.1.497281543.1719219319&semt=ais_hybrid" class="d-block w-100 rounded" alt="Property 2">
+            <div class="carousel-caption d-none d-md-block p-3">
+              <h5>$2,800,000 - 5 Beds, 3 Baths, 3800 sqft</h5>
+              <p>220 Pine St, San Francisco, CA</p>
             </div>
           </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon"></span>
         </button>
-      </div>      
+      </div>
 
       <div class="text-center mt-4">
-        <a href="properties.html" class="btn btn-primary btn-lg">View More Property Listings</a>
+        <a href="properties.html" class="btn btn-primary btn-lg">View All Property Listings</a>
       </div>
     </div>
   </section>
 
   <!-- Agents Section -->
   <section id="agents" class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Our Agents</h2>
-      <p class="lead mb-5">Meet our experienced agents who will help you find your dream home</p>
+    <div class="container">
+      <h2 class="text-center mb-4">Meet Our Agents</h2>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="card border-0 shadow">
+          <div class="card shadow-sm h-100 text-center">
             <img src="https://onclickwebdesign.com/wp-content/uploads/person_1.jpg" class="card-img-top" alt="Agent 1">
             <div class="card-body">
               <h5 class="card-title">Kaiara Spencer</h5>
@@ -95,7 +164,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card border-0 shadow">
+          <div class="card shadow-sm h-100 text-center">
             <img src="https://onclickwebdesign.com/wp-content/uploads/person_2.jpg" class="card-img-top" alt="Agent 2">
             <div class="card-body">
               <h5 class="card-title">Dave Simpson</h5>
@@ -104,7 +173,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card border-0 shadow">
+          <div class="card shadow-sm h-100 text-center">
             <img src="https://onclickwebdesign.com/wp-content/uploads/person_3.jpg" class="card-img-top" alt="Agent 3">
             <div class="card-body">
               <h5 class="card-title">Ben Thompson</h5>
@@ -116,32 +185,99 @@
     </div>
   </section>
 
-  <!-- Modal Newsletter -->
-  <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="newsletterLabel">Subscribe to our Newsletter</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <!-- Reviews Section -->
+  <section id="reviews" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Client Reviews</h2>
+      <div class="row g-4">
+        <!-- Review 1 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://img.freepik.com/premium-photo/young-real-estate-agent-worker-working-with-laptop-tablet-table-office-small-house-beside-itxa_1300982-6652.jpg?ga=GA1.1.497281543.1719219319&semt=ais_authors_boost" class="rounded-circle me-3" width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Sarah Johnson</h5>
+                  <div class="text-warning">★★★★★</div>
+                </div>
+              </div>
+              <p>"Kaiara helped us find our dream home in two weeks. Smooth and stress-free!"</p>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
-          <input type="email" class="form-control mb-3" placeholder="Enter your email" />
-          <button class="btn btn-primary w-100" onclick="subscribe()">Subscribe</button>
+        <!-- Review 2 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://img.freepik.com/premium-photo/indian-man-realtor-with-home-keys-city-street_380164-241969.jpg?ga=GA1.1.497281543.1719219319&semt=ais_authors_boost" class="rounded-circle me-3" width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Michael Rodriguez</h5>
+                  <div class="text-warning">★★★★☆</div>
+                </div>
+              </div>
+              <p>"Dave negotiated a great deal for us in San Francisco. Amazing service!"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://img.freepik.com/premium-photo/looking-excited-surprised-pointing-side-upwards-copy-space_1194-61361.jpg?ga=GA1.1.497281543.1719219319&semt=ais_authors_boost" class="rounded-circle me-3" width="60" height="60">
+                <div>
+                  <h5 class="mb-0">Emily Chen</h5>
+                  <div class="text-warning">★★★★★</div>
+                </div>
+              </div>
+              <p>"Ben guided us as first-time buyers. Very patient and knowledgeable!"</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <p>&copy; 2023 STATED. All rights reserved. | <i class="fa fa-heart text-danger"></i></p>
-      <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#newsletterModal">Subscribe to Newsletter</button>
+  <footer style="background-color: #222; color: white; padding: 40px 20px;">
+    <div class="flex container" style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+        <div class="footer-about" style="flex: 1;">
+            <h5 style="font-size: 18px; margin-bottom: 10px;">About Stated</h5>
+            <p style="font-size: 14px; color: #ccc;">Stated Real Estate is your trusted partner in finding your dream home. We are committed to providing exceptional service and making the buying and selling process as smooth as possible.</p>
+        </div>
+
+        <div class="footer-quick-links" style="flex: 1;">
+            <h5 style="font-size: 18px; margin-bottom: 10px;">Quick Links</h5>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">About Us</a></li>
+                <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Properties</a></li>
+                <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Agents</a></li>
+                <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-subscribe" style="flex: 1;">
+            <h5 style="font-size: 18px; margin-bottom: 10px;">Subscribe to our Newsletter</h5>
+            <div id="subscribe-container" style="display: flex;">
+                <input type="text" placeholder="Enter Email" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px 0 0 4px;"/>
+                <button class="right-rounded" style="background-color: #333; color: white; padding: 10px 20px; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">Send</button>
+            </div>
+
+            <h5 class="follow-us" style="font-size: 18px; margin-top: 20px;">Follow Us</h5>
+            <ul style="list-style: none; padding: 0; display: flex; gap: 10px;">
+                <li><a href="#" style="color: white; text-decoration: none;"><span class="fab fa-facebook-f"></span></a></li>
+                <li><a href="#" style="color: white; text-decoration: none;"><span class="fab fa-twitter"></span></a></li>
+                <li><a href="#" style="color: white; text-decoration: none;"><span class="fab fa-instagram"></span></a></li>
+                <li><a href="#" style="color: white; text-decoration: none;"><span class="fab fa-linkedin-in"></span></a></li>
+            </ul>
+        </div>
     </div>
-  </footer>
 
-  <!-- Bootstrap & JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+    <small style="display: block; text-align: center; margin-top: 20px; font-size: 12px; color: #ccc;">
+        Copyright &copy; 2023 All rights reserved | <span class="fa fa-heart"></span> 
+    </small>
+</footer>
+  <!-- Bootstrap Bundle JS -->
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

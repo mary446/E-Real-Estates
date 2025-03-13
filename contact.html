@@ -7,114 +7,189 @@
     <title>Contact Us - STATED Real Estate</title>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link href="css/styles.css" type="text/css" rel="Stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 
-<body>
-    <div id="header-hero-container">
+<body style="font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0;">
+    <div id="header-hero-container" style="position: relative; background-color: #333; padding: 20px 0;">
         <header>
-            <div class="flex container">
-                <a id="logo" href="index.html">STATED.</a>
+            <div class="flex container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center;">
+                <a id="logo" href="index.html" style="font-size: 2rem; font-weight: 700; color: #fff; text-decoration: none;">STATED.</a>
                 <nav>
-                    <button id="nav-toggle" class="hamburger-menu">
-                        <span class="strip"></span>
-                        <span class="strip"></span>
-                        <span class="strip"></span>
+                    <button id="nav-toggle" class="hamburger-menu" style="display: none; background: none; border: none; cursor: pointer;">
+                        <span class="strip" style="display: block; width: 30px; height: 3px; background-color: #fff; margin: 6px 0;"></span>
+                        <span class="strip" style="display: block; width: 30px; height: 3px; background-color: #fff; margin: 6px 0;"></span>
+                        <span class="strip" style="display: block; width: 30px; height: 3px; background-color: #fff; margin: 6px 0;"></span>
                     </button>
 
-                    <ul id="nav-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="http://www.google.com" target="_blank">Properties</a></li>
-                        <li><a href="agents.html">Agents</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
-                        <li id="close-flyout"><span class="fas fa-times"></span></li>
+                    <ul id="nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0;">
+                        <li style="margin-left: 30px;"><a href="index.html" style="color: #fff; font-weight: 600; font-size: 1rem; padding: 10px 0; text-decoration: none; transition: 0.3s ease;">Home</a></li>
+                        <li style="margin-left: 30px;"><a href="http://www.google.com" target="_blank" style="color: #fff; font-weight: 600; font-size: 1rem; padding: 10px 0; text-decoration: none; transition: 0.3s ease;">Properties</a></li>
+                        <li style="margin-left: 30px;"><a href="agents.html" style="color: #fff; font-weight: 600; font-size: 1rem; padding: 10px 0; text-decoration: none; transition: 0.3s ease;">Agents</a></li>
+                        <li style="margin-left: 30px;"><a href="contact.html" class="active" style="color: #ff5a5f; font-weight: 600; font-size: 1rem; padding: 10px 0; text-decoration: none; transition: 0.3s ease; border-bottom: 2px solid #ff5a5f;">Contact</a></li>
+                        <li id="close-flyout" style="display: none;"><span class="fas fa-times"></span></li>
                     </ul>
                 </nav>
             </div>
         </header>
     </div>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
+    <section id="contact" style="padding: 80px 0; background-color: #f8f9fa;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #333;">Contact Us</h2>
 
-            <div class="flex">
-                <div id="form-container">
-                    <h3>Contact Form</h3>
+            <div class="flex" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                <div id="form-container" style="flex: 1; background-color: #fff; border-radius: 5px; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); padding: 30px; margin: 15px; min-width: 300px;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: #ff5a5f;">Contact Form</h3>
                     <form>
-                        <label for="name">Name</label>
-                        <input type="text" id="name" />
+                        <label for="name" style="display: block; margin-bottom: 5px; font-weight: 600;">Name</label>
+                        <input type="text" id="name" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;" />
 
-                        <label for="email">Email</label>
-                        <input type="text" id="email" />
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600;">Email</label>
+                        <input type="text" id="email" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;" />
 
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" />
+                        <label for="subject" style="display: block; margin-bottom: 5px; font-weight: 600;">Subject</label>
+                        <input type="text" id="subject" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;" />
 
-                        <label for="message">Message</label>
-                        <textarea id="message">Write your message here..</textarea>
+                        <label for="message" style="display: block; margin-bottom: 5px; font-weight: 600;">Message</label>
+                        <textarea id="message" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 4px; min-height: 150px; box-sizing: border-box;">Write your message here..</textarea>
 
-                        <button class="rounded">Send Message</button>
+                        <button class="rounded" style="background-color: #ff5a5f; color: #fff; border: none; padding: 12px 20px; border-radius: 4px; cursor: pointer; font-weight: 600; transition: 0.3s ease;">Send Message</button>
                     </form>
                 </div>
 
-                <div id="address-container">
-                    <label>Address</label>
-                    <address>
+                <div id="address-container" style="flex: 1; background-color: #fff; border-radius: 5px; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); padding: 30px; margin: 15px; min-width: 300px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 1.2rem; color: #ff5a5f;">Address</label>
+                    <address style="margin-bottom: 30px; font-style: normal; line-height: 1.8; color: #666;">
                         20377 Evergreen Terrace Mountain View, California, USA 
                     </address>
 
-                    <label>Phone</label>
-                    <a href="#">232-232-2323</a>
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 1.2rem; color: #ff5a5f;">Phone</label>
+                    <a href="#" style="display: block; margin-bottom: 30px; color: #666; text-decoration: none; transition: 0.3s ease;">232-232-2323</a>
 
-                    <label>Email Address</label>
-                    <a href="#">ouremail@domain.com</a>
+                    <label style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 1.2rem; color: #ff5a5f;">Email Address</label>
+                    <a href="#" style="display: block; color: #666; text-decoration: none; transition: 0.3s ease;">ouremail@domain.com</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="flex container">
-            <div class="footer-about">
-                <h5>About Stated</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+    <footer style="background-color: #333; color: #fff; padding: 60px 0 20px;">
+        <div class="flex container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <div class="footer-about" style="flex: 1; margin: 0 20px; min-width: 300px; margin-bottom: 40px;">
+                <h5 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">About Stated</h5>
+                <p style="color: rgba(255, 255, 255, 0.8);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
             </div>
 
-            <div class="footer-quick-links">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Properties</a></li>
-                    <li><a href="agents.html">Agents</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+            <div class="footer-quick-links" style="flex: 1; margin: 0 20px; min-width: 300px; margin-bottom: 40px;">
+                <h5 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">Quick Links</h5>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s ease;">Home</a></li>
+                    <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s ease;">Properties</a></li>
+                    <li style="margin-bottom: 10px;"><a href="agents.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s ease;">Agents</a></li>
+                    <li style="margin-bottom: 10px;"><a href="contact.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s ease;">Contact Us</a></li>
                 </ul>
             </div>
 
-            <div class="footer-subscribe">
-                <h5>Subscribe to our Newsletter</h5>
-                <div id="subscribe-container">
-                    <input type="text" placeholder="Enter Email" />
-                    <button class="right-rounded">Send</button>
+            <div class="footer-subscribe" style="flex: 1; margin: 0 20px; min-width: 300px; margin-bottom: 40px;">
+                <h5 style="color: #fff; font-size: 1.2rem; margin-bottom: 20px;">Subscribe to our Newsletter</h5>
+                <div id="subscribe-container" style="display: flex; margin-bottom: 20px;">
+                    <input type="text" placeholder="Enter Email" style="flex: 1; padding: 12px; border: none; border-radius: 4px 0 0 4px;" />
+                    <button class="right-rounded" style="border: none; background-color: #ff5a5f; color: #fff; padding: 12px 20px; border-radius: 0 4px 4px 0; cursor: pointer; transition: 0.3s ease;">Send</button>
                 </div>
 
-                <h5 class="follow-us">Follow Us</h5>
-                <ul>
-                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                <h5 class="follow-us" style="color: #fff; font-size: 1.2rem; margin-bottom: 20px; margin-top: 30px;">Follow Us</h5>
+                <ul style="display: flex; list-style: none; padding: 0;">
+                    <li style="margin-right: 15px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s ease;"><span class="fab fa-facebook-f"></span></a></li>
+                    <li style="margin-right: 15px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s ease;"><span class="fab fa-twitter"></span></a></li>
+                    <li style="margin-right: 15px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s ease;"><span class="fab fa-instagram"></span></a></li>
+                    <li style="margin-right: 15px;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: 0.3s ease;"><span class="fab fa-linkedin-in"></span></a></li>
                 </ul>
             </div>
         </div>
 
-        <small>
-            Copyright &copy; 2023 All rights reserved | <span class="fa fa-heart"></span> 
+        <small style="display: block; text-align: center; padding-top: 30px; color: rgba(255, 255, 255, 0.7);">
+            Copyright &copy; 2023 All rights reserved | <span class="fa fa-heart" style="color: #ff5a5f;"></span> 
         </small>
     </footer>
+
+    <script>
+        // Add responsive menu functionality (since your script.js is separate)
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').style.right = '0';
+        });
+        
+        document.getElementById('close-flyout').addEventListener('click', function() {
+            document.getElementById('nav-menu').style.right = '-280px';
+        });
+        
+        // Media query handling for mobile menu
+        function handleMediaChange(mediaQuery) {
+            if (mediaQuery.matches) { // If media query matches (screen <= 767px)
+                document.getElementById('nav-toggle').style.display = 'block';
+                document.getElementById('close-flyout').style.display = 'block';
+                document.getElementById('nav-menu').style.flexDirection = 'column';
+                document.getElementById('nav-menu').style.position = 'fixed';
+                document.getElementById('nav-menu').style.top = '0';
+                document.getElementById('nav-menu').style.right = '-280px';
+                document.getElementById('nav-menu').style.width = '280px';
+                document.getElementById('nav-menu').style.height = '100%';
+                document.getElementById('nav-menu').style.backgroundColor = '#fff';
+                document.getElementById('nav-menu').style.padding = '80px 0 30px';
+                document.getElementById('nav-menu').style.boxShadow = '-2px 0 10px rgba(0, 0, 0, 0.1)';
+                document.getElementById('nav-menu').style.transition = '0.3s ease';
+                document.getElementById('nav-menu').style.zIndex = '2000';
+                
+                // Update menu items for mobile
+                const menuItems = document.querySelectorAll('#nav-menu li');
+                menuItems.forEach(function(item, index) {
+                    if (index < menuItems.length - 1) { // Skip the close button
+                        item.style.margin = '0';
+                        const link = item.querySelector('a');
+                        if (link) {
+                            link.style.color = '#333';
+                            link.style.display = 'block';
+                            link.style.padding = '15px 30px';
+                            link.style.borderBottom = '1px solid rgba(0, 0, 0, 0.05)';
+                        }
+                    }
+                });
+            } else {
+                document.getElementById('nav-toggle').style.display = 'none';
+                document.getElementById('nav-menu').style.position = 'static';
+                document.getElementById('nav-menu').style.display = 'flex';
+                document.getElementById('nav-menu').style.flexDirection = 'row';
+                document.getElementById('nav-menu').style.backgroundColor = 'transparent';
+                document.getElementById('nav-menu').style.padding = '0';
+                document.getElementById('nav-menu').style.boxShadow = 'none';
+                document.getElementById('nav-menu').style.right = '0';
+                document.getElementById('nav-menu').style.width = 'auto';
+                document.getElementById('nav-menu').style.height = 'auto';
+                
+                // Reset menu items for desktop
+                const menuItems = document.querySelectorAll('#nav-menu li');
+                menuItems.forEach(function(item, index) {
+                    if (index < menuItems.length - 1) { // Skip the close button
+                        item.style.margin = '0 0 0 30px';
+                        const link = item.querySelector('a');
+                        if (link) {
+                            link.style.color = '#fff';
+                            link.style.display = 'inline';
+                            link.style.padding = '10px 0';
+                            link.style.borderBottom = 'none';
+                        }
+                    }
+                });
+            }
+        }
+
+        // Register and immediately execute the media query handler
+        const mediaQuery = window.matchMedia('(max-width: 767px)');
+        handleMediaChange(mediaQuery);
+        mediaQuery.addListener(handleMediaChange);
+    </script>
 </body>
 </html>

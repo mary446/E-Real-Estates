@@ -7,7 +7,403 @@
     <title>About Us - Stated Real Estate</title>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link href="css/styles.css" type="text/css" rel="Stylesheet" />
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header Styles */
+        #header-hero-container {
+            position: relative;
+            min-height: 600px;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://onclickwebdesign.com/wp-content/uploads/2019/08/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            padding: 20px 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        #logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        #nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-menu {
+            display: none;
+        }
+
+        .strip {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            margin: 6px 0;
+        }
+
+        #nav-menu {
+            display: flex;
+        }
+
+        #nav-menu li {
+            margin-left: 30px;
+        }
+
+        #nav-menu li a {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 0;
+            transition: 0.3s ease;
+        }
+
+        #nav-menu li a:hover, #nav-menu li a.active {
+            color: #ff5a5f;
+            border-bottom: 2px solid #ff5a5f;
+        }
+
+        #close-flyout {
+            display: none;
+        }
+
+        /* Hero Section */
+        #about-hero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .fade {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .about-hero-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-hero-text p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* About Us Section */
+        #about-us {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        #about-us h2, #team h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .large-paragraph {
+            text-align: center;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #666;
+        }
+
+        .box {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+        }
+
+        .box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff5a5f;
+        }
+
+        /* Team Section */
+        #team {
+            padding: 80px 0;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            margin: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 20px 0 5px;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+
+        footer h5 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-about, .footer-quick-links, .footer-subscribe {
+            flex: 1;
+            margin: 0 20px;
+            min-width: 300px;
+        }
+
+        .footer-quick-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-quick-links ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: 0.3s ease;
+        }
+
+        .footer-quick-links ul li a:hover {
+            color: #ff5a5f;
+        }
+
+        #subscribe-container {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        #subscribe-container input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .right-rounded {
+            border: none;
+            background-color: #ff5a5f;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .right-rounded:hover {
+            background-color: #ff3940;
+        }
+
+        .follow-us {
+            margin-top: 30px;
+        }
+
+        footer ul {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        footer ul li {
+            margin-right: 15px;
+        }
+
+        footer ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #ff5a5f;
+        }
+
+        footer small {
+            display: block;
+            text-align: center;
+            padding-top: 30px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .fa-heart {
+            color: #ff5a5f;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .flex {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box, .card {
+                margin-bottom: 30px;
+            }
+
+            .footer-about, .footer-quick-links, .footer-subscribe {
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            footer ul {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #nav-toggle {
+                display: block;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            #nav-menu {
+                position: fixed;
+                top: 0;
+                right: -280px;
+                width: 280px;
+                height: 100%;
+                background-color: #fff;
+                flex-direction: column;
+                padding: 80px 0 30px;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+                transition: 0.3s ease;
+                z-index: 2000;
+            }
+
+            #nav-menu li {
+                margin: 0;
+            }
+
+            #nav-menu li a {
+                color: #333;
+                display: block;
+                padding: 15px 30px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            #nav-menu.active {
+                right: 0;
+            }
+
+            #close-flyout {
+                display: block;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                color: #333;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .about-hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-hero-text p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/95dc93da07.js"></script>

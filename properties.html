@@ -15,47 +15,47 @@
     <script src="js/script.js" defer></script>
 </head>
 
-<body>
-    <div id="header-container">
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
+    <div id="header-container" style="background-color: #333; color: white; padding: 10px 0;">
         <header>
-            <div class="flex container">
-                <a id="logo" href="index.html">STATED.</a>
+            <div class="flex container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <a id="logo" href="index.html" style="font-size: 24px; font-weight: bold; color: white; text-decoration: none;">STATED.</a>
                 <nav>
-                    <button id="nav-toggle" class="hamburger-menu">
-                        <span class="strip"></span>
-                        <span class="strip"></span>
-                        <span class="strip"></span>
+                    <button id="nav-toggle" class="hamburger-menu" style="background: none; border: none; cursor: pointer;">
+                        <span class="strip" style="display: block; width: 25px; height: 3px; background-color: white; margin: 5px 0;"></span>
+                        <span class="strip" style="display: block; width: 25px; height: 3px; background-color: white; margin: 5px 0;"></span>
+                        <span class="strip" style="display: block; width: 25px; height: 3px; background-color: white; margin: 5px 0;"></span>
                     </button>
 
-                    <ul id="nav-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="properties.html" class="active">Properties</a></li>
-                        <li><a href="agents.html">Agents</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li id="close-flyout"><span class="fas fa-times"></span></li>
+                    <ul id="nav-menu" style="list-style: none; display: flex; margin: 0; padding: 0;">
+                        <li><a href="index.html" style="color: white; text-decoration: none; padding: 10px 15px;">Home</a></li>
+                        <li><a href="properties.html" class="active" style="color: white; text-decoration: none; padding: 10px 15px;">Properties</a></li>
+                        <li><a href="agents.html" style="color: white; text-decoration: none; padding: 10px 15px;">Agents</a></li>
+                        <li><a href="contact.html" style="color: white; text-decoration: none; padding: 10px 15px;">Contact</a></li>
+                        <li><a href="about.html" style="color: white; text-decoration: none; padding: 10px 15px;">About</a></li>
+                        <li id="close-flyout"><span class="fas fa-times" style="color: white; cursor: pointer;"></span></li>
                     </ul>
                 </nav>
             </div>
         </header>
     </div>
 
-    <section id="properties-hero">
+    <section id="properties-hero" style="background-image: url('https://img.freepik.com/free-photo/modern-residential-district-with-green-roof-balcony-generated-by-ai_188544-10276.jpg?ga=GA1.1.497281543.1719219319&semt=ais_authors_boost'); background-size: cover; background-position: center; color: white; text-align: center; padding: 100px 20px;">
         <div class="container">
-            <h1>Our Properties</h1>
-            <p>Find your perfect home from our carefully selected properties</p>
+            <h1 style="font-size: 48px; margin: 0;">Our Properties</h1>
+            <p style="font-size: 18px;">Find your perfect home from our carefully selected properties</p>
         </div>
     </section>
 
-    <section id="property-search">
+    <section id="property-search" style="background-color: #f4f4f4; padding: 40px 20px;">
         <div class="container">
-            <h2>Find Your Dream Home</h2>
-            <div class="search-container">
-                <form id="property-filter">
-                    <div class="filter-row">
-                        <div class="filter-group">
-                            <label for="location">Location</label>
-                            <select id="location" name="location">
+            <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">Find Your Dream Home</h2>
+            <div class="search-container" style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                <form id="property-filter" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="filter-row" style="display: flex; gap: 20px;">
+                        <div class="filter-group" style="flex: 1;">
+                            <label for="location" style="display: block; margin-bottom: 5px; font-weight: bold;">Location</label>
+                            <select id="location" name="location" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                 <option value="">All Locations</option>
                                 <option value="san-francisco">San Francisco, CA</option>
                                 <option value="oakland">Oakland, CA</option>
@@ -64,9 +64,9 @@
                             </select>
                         </div>
                         
-                        <div class="filter-group">
-                            <label for="property-type">Property Type</label>
-                            <select id="property-type" name="property-type">
+                        <div class="filter-group" style="flex: 1;">
+                            <label for="property-type" style="display: block; margin-bottom: 5px; font-weight: bold;">Property Type</label>
+                            <select id="property-type" name="property-type" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                 <option value="">All Types</option>
                                 <option value="house">House</option>
                                 <option value="apartment">Apartment</option>
@@ -75,9 +75,9 @@
                             </select>
                         </div>
                         
-                        <div class="filter-group">
-                            <label for="bedrooms">Bedrooms</label>
-                            <select id="bedrooms" name="bedrooms">
+                        <div class="filter-group" style="flex: 1;">
+                            <label for="bedrooms" style="display: block; margin-bottom: 5px; font-weight: bold;">Bedrooms</label>
+                            <select id="bedrooms" name="bedrooms" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                 <option value="">Any</option>
                                 <option value="1">1+</option>
                                 <option value="2">2+</option>
@@ -87,9 +87,9 @@
                             </select>
                         </div>
                         
-                        <div class="filter-group">
-                            <label for="bathrooms">Bathrooms</label>
-                            <select id="bathrooms" name="bathrooms">
+                        <div class="filter-group" style="flex: 1;">
+                            <label for="bathrooms" style="display: block; margin-bottom: 5px; font-weight: bold;">Bathrooms</label>
+                            <select id="bathrooms" name="bathrooms" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                 <option value="">Any</option>
                                 <option value="1">1+</option>
                                 <option value="2">2+</option>
@@ -99,19 +99,19 @@
                         </div>
                     </div>
                     
-                    <div class="filter-row">
-                        <div class="filter-group price-range">
-                            <label for="price-min">Price Range</label>
-                            <div class="price-inputs">
-                                <input type="text" id="price-min" name="price-min" placeholder="Min Price">
+                    <div class="filter-row" style="display: flex; gap: 20px;">
+                        <div class="filter-group price-range" style="flex: 1;">
+                            <label for="price-min" style="display: block; margin-bottom: 5px; font-weight: bold;">Price Range</label>
+                            <div class="price-inputs" style="display: flex; gap: 10px;">
+                                <input type="text" id="price-min" name="price-min" placeholder="Min Price" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                 <span>to</span>
-                                <input type="text" id="price-max" name="price-max" placeholder="Max Price">
+                                <input type="text" id="price-max" name="price-max" placeholder="Max Price" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                             </div>
                         </div>
                         
-                        <div class="filter-group">
-                            <label for="sort-by">Sort By</label>
-                            <select id="sort-by" name="sort-by">
+                        <div class="filter-group" style="flex: 1;">
+                            <label for="sort-by" style="display: block; margin-bottom: 5px; font-weight: bold;">Sort By</label>
+                            <select id="sort-by" name="sort-by" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                 <option value="newest">Newest</option>
                                 <option value="price-asc">Price (Low to High)</option>
                                 <option value="price-desc">Price (High to Low)</option>
@@ -120,8 +120,8 @@
                             </select>
                         </div>
                         
-                        <div class="filter-group search-button">
-                            <button type="submit" class="rounded">Search Properties</button>
+                        <div class="filter-group search-button" style="flex: 1; display: flex; align-items: flex-end;">
+                            <button type="submit" class="rounded" style="background-color: #333; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Search Properties</button>
                         </div>
                     </div>
                 </form>
@@ -129,215 +129,215 @@
         </div>
     </section>
 
-    <section id="property-listings">
+    <section id="property-listings" style="padding: 40px 20px;">
         <div class="container">
-            <h2>Featured Properties</h2>
-            <div class="properties-grid">
+            <h2 style="text-align: center; font-size: 32px; margin-bottom: 20px;">Featured Properties</h2>
+            <div class="properties-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
                 <!-- Property 1 -->
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt="Luxury Villa in San Francisco" />
-                        <div class="property-tag">For Sale</div>
-                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                <div class="property-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                    <div class="property-image" style="position: relative;">
+                        <img src="https://img.freepik.com/free-photo/charming-yellow-house-with-wooden-windows-green-grassy-garden_181624-8074.jpg?ga=GA1.1.497281543.1719219319&semt=ais_hybrid" alt="Luxury Villa in San Francisco" style="width: 100%; height: 200px; object-fit: cover;"/>
+                        <div class="property-tag" style="position: absolute; top: 10px; left: 10px; background-color: #333; color: white; padding: 5px 10px; border-radius: 4px;">For Sale</div>
+                        <div class="property-favorite" style="position: absolute; top: 10px; right: 10px; color: white; cursor: pointer;"><span class="far fa-heart"></span></div>
                     </div>
-                    <div class="property-details">
-                        <h3>Luxury Villa with Ocean View</h3>
-                        <p class="price">$3,400,000</p>
-                        <address>
+                    <div class="property-details" style="padding: 20px;">
+                        <h3 style="font-size: 24px; margin: 0;">Luxury Villa with Ocean View</h3>
+                        <p class="price" style="font-size: 20px; color: #333; margin: 10px 0;">$3,400,000</p>
+                        <address style="font-size: 14px; color: #666; margin: 10px 0;">
                             480 12th, Unit 14, San Francisco, CA
                         </address>
-                        <div class="property-specs">
+                        <div class="property-specs" style="display: flex; gap: 10px; font-size: 14px; color: #666;">
                             <span class="beds"><i class="fas fa-bed"></i> 6 beds</span>
                             <span class="baths"><i class="fas fa-bath"></i> 4 baths</span>
                             <span class="sqft"><i class="fas fa-vector-square"></i> 4,250 sqft.</span>
                         </div>
-                        <div class="property-footer">
-                            <span class="property-date">Listed 2 days ago</span>
-                            <a href="property-detail.html" class="view-details">View Details</a>
+                        <div class="property-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span class="property-date" style="font-size: 14px; color: #666;">Listed 2 days ago</span>
+                            <a href="property-detail.html" class="view-details" style="background-color: #333; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">View Details</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Property 2 -->
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_2.jpg" alt="Modern Condo in Downtown" />
-                        <div class="property-tag">For Sale</div>
-                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                <div class="property-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                    <div class="property-image" style="position: relative;">
+                        <img src="https://img.freepik.com/premium-photo/elegant-suburban-red-brick-home-with-landscaped-lawn-eyelevel-view_501731-16363.jpg?ga=GA1.1.497281543.1719219319&semt=ais_hybrid" alt="Modern Condo in Downtown" style="width: 100%; height: 200px; object-fit: cover;"/>
+                        <div class="property-tag" style="position: absolute; top: 10px; left: 10px; background-color: #333; color: white; padding: 5px 10px; border-radius: 4px;">For Sale</div>
+                        <div class="property-favorite" style="position: absolute; top: 10px; right: 10px; color: white; cursor: pointer;"><span class="far fa-heart"></span></div>
                     </div>
-                    <div class="property-details">
-                        <h3>Modern Downtown Condo</h3>
-                        <p class="price">$1,750,000</p>
-                        <address>
+                    <div class="property-details" style="padding: 20px;">
+                        <h3 style="font-size: 24px; margin: 0;">Modern Downtown Condo</h3>
+                        <p class="price" style="font-size: 20px; color: #333; margin: 10px 0;">$1,750,000</p>
+                        <address style="font-size: 14px; color: #666; margin: 10px 0;">
                             123 Market St, Unit 456, San Francisco, CA
                         </address>
-                        <div class="property-specs">
+                        <div class="property-specs" style="display: flex; gap: 10px; font-size: 14px; color: #666;">
                             <span class="beds"><i class="fas fa-bed"></i> 3 beds</span>
                             <span class="baths"><i class="fas fa-bath"></i> 2 baths</span>
                             <span class="sqft"><i class="fas fa-vector-square"></i> 1,850 sqft.</span>
                         </div>
-                        <div class="property-footer">
-                            <span class="property-date">Listed 1 week ago</span>
-                            <a href="property-detail.html" class="view-details">View Details</a>
+                        <div class="property-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span class="property-date" style="font-size: 14px; color: #666;">Listed 1 week ago</span>
+                            <a href="property-detail.html" class="view-details" style="background-color: #333; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">View Details</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Property 3 -->
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_3.jpg" alt="Family Home in Berkeley" />
-                        <div class="property-tag">For Sale</div>
-                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                <div class="property-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                    <div class="property-image" style="position: relative;">
+                        <img src="https://img.freepik.com/premium-photo/residential-family-house-with-concrete-pathway-front-yard_769578-2421.jpg?ga=GA1.1.497281543.1719219319&semt=ais_hybrid" alt="Family Home in Berkeley" style="width: 100%; height: 200px; object-fit: cover;"/>
+                        <div class="property-tag" style="position: absolute; top: 10px; left: 10px; background-color: #333; color: white; padding: 5px 10px; border-radius: 4px;">For Sale</div>
+                        <div class="property-favorite" style="position: absolute; top: 10px; right: 10px; color: white; cursor: pointer;"><span class="far fa-heart"></span></div>
                     </div>
-                    <div class="property-details">
-                        <h3>Spacious Family Home</h3>
-                        <p class="price">$2,250,000</p>
-                        <address>
+                    <div class="property-details" style="padding: 20px;">
+                        <h3 style="font-size: 24px; margin: 0;">Spacious Family Home</h3>
+                        <p class="price" style="font-size: 20px; color: #333; margin: 10px 0;">$2,250,000</p>
+                        <address style="font-size: 14px; color: #666; margin: 10px 0;">
                             789 Oak Avenue, Berkeley, CA
                         </address>
-                        <div class="property-specs">
+                        <div class="property-specs" style="display: flex; gap: 10px; font-size: 14px; color: #666;">
                             <span class="beds"><i class="fas fa-bed"></i> 5 beds</span>
                             <span class="baths"><i class="fas fa-bath"></i> 3 baths</span>
                             <span class="sqft"><i class="fas fa-vector-square"></i> 3,200 sqft.</span>
                         </div>
-                        <div class="property-footer">
-                            <span class="property-date">Listed 3 days ago</span>
-                            <a href="property-detail.html" class="view-details">View Details</a>
+                        <div class="property-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span class="property-date" style="font-size: 14px; color: #666;">Listed 3 days ago</span>
+                            <a href="property-detail.html" class="view-details" style="background-color: #333; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">View Details</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Property 4 -->
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_4.jpg" alt="Waterfront Property" />
-                        <div class="property-tag sale">For Sale</div>
-                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                <div class="property-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                    <div class="property-image" style="position: relative;">
+                        <img src="https://media.istockphoto.com/id/1436217023/photo/exterior-of-a-blue-suburban-home.jpg?b=1&s=612x612&w=0&k=20&c=9bA_E6bi430LQiIg7wahxg5aNph5mIzD8SB0oiEtvMs=" alt="Waterfront Property" style="width: 100%; height: 200px; object-fit: cover;"/>
+                        <div class="property-tag sale" style="position: absolute; top: 10px; left: 10px; background-color: #333; color: white; padding: 5px 10px; border-radius: 4px;">For Sale</div>
+                        <div class="property-favorite" style="position: absolute; top: 10px; right: 10px; color: white; cursor: pointer;"><span class="far fa-heart"></span></div>
                     </div>
-                    <div class="property-details">
-                        <h3>Waterfront Luxury Property</h3>
-                        <p class="price">$4,500,000</p>
-                        <address>
+                    <div class="property-details" style="padding: 20px;">
+                        <h3 style="font-size: 24px; margin: 0;">Waterfront Luxury Property</h3>
+                        <p class="price" style="font-size: 20px; color: #333; margin: 10px 0;">$4,500,000</p>
+                        <address style="font-size: 14px; color: #666; margin: 10px 0;">
                             1234 Marina Blvd, San Francisco, CA
                         </address>
-                        <div class="property-specs">
+                        <div class="property-specs" style="display: flex; gap: 10px; font-size: 14px; color: #666;">
                             <span class="beds"><i class="fas fa-bed"></i> 4 beds</span>
                             <span class="baths"><i class="fas fa-bath"></i> 3.5 baths</span>
                             <span class="sqft"><i class="fas fa-vector-square"></i> 3,800 sqft.</span>
                         </div>
-                        <div class="property-footer">
-                            <span class="property-date">Listed 5 days ago</span>
-                            <a href="property-detail.html" class="view-details">View Details</a>
+                        <div class="property-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span class="property-date" style="font-size: 14px; color: #666;">Listed 5 days ago</span>
+                            <a href="property-detail.html" class="view-details" style="background-color: #333; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">View Details</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Property 5 -->
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_5.jpg" alt="Urban Loft" />
-                        <div class="property-tag rent">For Rent</div>
-                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                <div class="property-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                    <div class="property-image" style="position: relative;">
+                        <img src="https://media.istockphoto.com/id/1442148484/photo/3d-rendering-of-modern-suburban-house-in-the-garden.jpg?b=1&s=612x612&w=0&k=20&c=nDchx0WDIzgjrs3bb5XB6B3BT6E5xkgpy1XYeYnpDjA=" alt="Urban Loft" style="width: 100%; height: 200px; object-fit: cover;"/>
+                        <div class="property-tag rent" style="position: absolute; top: 10px; left: 10px; background-color: #333; color: white; padding: 5px 10px; border-radius: 4px;">For Rent</div>
+                        <div class="property-favorite" style="position: absolute; top: 10px; right: 10px; color: white; cursor: pointer;"><span class="far fa-heart"></span></div>
                     </div>
-                    <div class="property-details">
-                        <h3>Urban Loft with City Views</h3>
-                        <p class="price">$5,500/month</p>
-                        <address>
+                    <div class="property-details" style="padding: 20px;">
+                        <h3 style="font-size: 24px; margin: 0;">Urban Loft with City Views</h3>
+                        <p class="price" style="font-size: 20px; color: #333; margin: 10px 0;">$5,500/month</p>
+                        <address style="font-size: 14px; color: #666; margin: 10px 0;">
                             567 Mission St, San Francisco, CA
                         </address>
-                        <div class="property-specs">
+                        <div class="property-specs" style="display: flex; gap: 10px; font-size: 14px; color: #666;">
                             <span class="beds"><i class="fas fa-bed"></i> 2 beds</span>
                             <span class="baths"><i class="fas fa-bath"></i> 2 baths</span>
                             <span class="sqft"><i class="fas fa-vector-square"></i> 1,650 sqft.</span>
                         </div>
-                        <div class="property-footer">
-                            <span class="property-date">Listed 1 day ago</span>
-                            <a href="property-detail.html" class="view-details">View Details</a>
+                        <div class="property-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span class="property-date" style="font-size: 14px; color: #666;">Listed 1 day ago</span>
+                            <a href="property-detail.html" class="view-details" style="background-color: #333; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">View Details</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Property 6 -->
-                <div class="property-card">
-                    <div class="property-image">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_6.jpg" alt="Classic Victorian" />
-                        <div class="property-tag">For Sale</div>
-                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                <div class="property-card" style="background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                    <div class="property-image" style="position: relative;">
+                        <img src="https://media.istockphoto.com/id/1447708518/photo/modern-villa-exterior-in-summer.jpg?b=1&s=612x612&w=0&k=20&c=YrnE_1er1yX-M31XtbYtoZRU9oJy7cQfk63Ic24mVIk=" alt="Classic Victorian" style="width: 100%; height: 200px; object-fit: cover;"/>
+                        <div class="property-tag" style="position: absolute; top: 10px; left: 10px; background-color: #333; color: white; padding: 5px 10px; border-radius: 4px;">For Sale</div>
+                        <div class="property-favorite" style="position: absolute; top: 10px; right: 10px; color: white; cursor: pointer;"><span class="far fa-heart"></span></div>
                     </div>
-                    <div class="property-details">
-                        <h3>Renovated Victorian Home</h3>
-                        <p class="price">$2,850,000</p>
-                        <address>
+                    <div class="property-details" style="padding: 20px;">
+                        <h3 style="font-size: 24px; margin: 0;">Renovated Victorian Home</h3>
+                        <p class="price" style="font-size: 20px; color: #333; margin: 10px 0;">$2,850,000</p>
+                        <address style="font-size: 14px; color: #666; margin: 10px 0;">
                             890 Hayes St, San Francisco, CA
                         </address>
-                        <div class="property-specs">
+                        <div class="property-specs" style="display: flex; gap: 10px; font-size: 14px; color: #666;">
                             <span class="beds"><i class="fas fa-bed"></i> 4 beds</span>
                             <span class="baths"><i class="fas fa-bath"></i> 3 baths</span>
                             <span class="sqft"><i class="fas fa-vector-square"></i> 2,900 sqft.</span>
                         </div>
-                        <div class="property-footer">
-                            <span class="property-date">Listed 2 weeks ago</span>
-                            <a href="property-detail.html" class="view-details">View Details</a>
+                        <div class="property-footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                            <span class="property-date" style="font-size: 14px; color: #666;">Listed 2 weeks ago</span>
+                            <a href="property-detail.html" class="view-details" style="background-color: #333; color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none;">View Details</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="pagination">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+            <div class="pagination" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                <a href="#" class="active" style="background-color: #333; color: white; padding: 10px 15px; border-radius: 4px; text-decoration: none;">1</a>
+                <a href="#" style="background-color: #f4f4f4; color: #333; padding: 10px 15px; border-radius: 4px; text-decoration: none;">2</a>
+                <a href="#" style="background-color: #f4f4f4; color: #333; padding: 10px 15px; border-radius: 4px; text-decoration: none;">3</a>
+                <a href="#" class="next" style="background-color: #f4f4f4; color: #333; padding: 10px 15px; border-radius: 4px; text-decoration: none;"><i class="fas fa-chevron-right"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="contact-banner">
+    <section id="contact-banner" style="background-color: #333; color: white; text-align: center; padding: 60px 20px;">
         <div class="container">
             <div class="banner-content">
-                <h2>Looking for something specific?</h2>
-                <p>Our agents can help you find exactly what you're looking for</p>
-                <button class="rounded">Contact an Agent</button>
+                <h2 style="font-size: 32px; margin: 0;">Looking for something specific?</h2>
+                <p style="font-size: 18px; margin: 10px 0;">Our agents can help you find exactly what you're looking for</p>
+                <button class="rounded" style="background-color: white; color: #333; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Contact an Agent</button>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="flex container">
-            <div class="footer-about">
-                <h5>About Stated</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+    <footer style="background-color: #222; color: white; padding: 40px 20px;">
+        <div class="flex container" style="display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+            <div class="footer-about" style="flex: 1;">
+                <h5 style="font-size: 18px; margin-bottom: 10px;">About Stated</h5>
+                <p style="font-size: 14px; color: #ccc;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
             </div>
 
-            <div class="footer-quick-links">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Properties</a></li>
-                    <li><a href="#">Agents</a></li>
-                    <li><a href="#">Contact Us</a></li>
+            <div class="footer-quick-links" style="flex: 1;">
+                <h5 style="font-size: 18px; margin-bottom: 10px;">Quick Links</h5>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">About Us</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Properties</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Agents</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none; font-size: 14px;">Contact Us</a></li>
                 </ul>
             </div>
 
-            <div class="footer-subscribe">
-                <h5>Subscribe to our Newsletter</h5>
-                <div id="subscribe-container">
-                    <input type="text" placeholder="Enter Email" />
-                    <button class="right-rounded">Send</button>
+            <div class="footer-subscribe" style="flex: 1;">
+                <h5 style="font-size: 18px; margin-bottom: 10px;">Subscribe to our Newsletter</h5>
+                <div id="subscribe-container" style="display: flex;">
+                    <input type="text" placeholder="Enter Email" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px 0 0 4px;"/>
+                    <button class="right-rounded" style="background-color: #333; color: white; padding: 10px 20px; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">Send</button>
                 </div>
 
-                <h5 class="follow-us">Follow Us</h5>
-                <ul>
-                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                <h5 class="follow-us" style="font-size: 18px; margin-top: 20px;">Follow Us</h5>
+                <ul style="list-style: none; padding: 0; display: flex; gap: 10px;">
+                    <li><a href="#" style="color: white; text-decoration: none;"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;"><span class="fab fa-instagram"></span></a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;"><span class="fab fa-linkedin-in"></span></a></li>
                 </ul>
             </div>
         </div>
 
-        <small>
+        <small style="display: block; text-align: center; margin-top: 20px; font-size: 12px; color: #ccc;">
             Copyright &copy; 2023 All rights reserved | <span class="fa fa-heart"></span> 
         </small>
     </footer>

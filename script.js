@@ -4,16 +4,7 @@ $(function () {
     let navMenu = $('#nav-menu');
     let navToggle = $('#nav-toggle');
 
-    function subscribe() {
-        const email = document.querySelector('#newsletterModal input').value;
-        if (email.trim() === "") {
-          alert("Please enter an email.");
-        } else {
-          alert(`Thanks for subscribing, ${email}!`);
-          const modal = bootstrap.Modal.getInstance(document.getElementById('newsletterModal'));
-          modal.hide();
-        }
-      }
+   
       
     // Initialize properties slider
     $('#properties-slider').slick({

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Properties - STATED Real Estate</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="css/styles.css" type="text/css" rel="Stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="header-container">
+        <header>
+            <div class="flex container">
+                <a id="logo" href="index.html">STATED.</a>
+                <nav>
+                    <button id="nav-toggle" class="hamburger-menu">
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                    </button>
+
+                    <ul id="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html" class="active">Properties</a></li>
+                        <li><a href="agents.html">Agents</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li id="close-flyout"><span class="fas fa-times"></span></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <section id="properties-hero">
+        <div class="container">
+            <h1>Our Properties</h1>
+            <p>Find your perfect home from our carefully selected properties</p>
+        </div>
+    </section>
+
+    <section id="property-search">
+        <div class="container">
+            <h2>Find Your Dream Home</h2>
+            <div class="search-container">
+                <form id="property-filter">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="location">Location</label>
+                            <select id="location" name="location">
+                                <option value="">All Locations</option>
+                                <option value="san-francisco">San Francisco, CA</option>
+                                <option value="oakland">Oakland, CA</option>
+                                <option value="berkeley">Berkeley, CA</option>
+                                <option value="san-jose">San Jose, CA</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="property-type">Property Type</label>
+                            <select id="property-type" name="property-type">
+                                <option value="">All Types</option>
+                                <option value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="condo">Condo</option>
+                                <option value="townhouse">Townhouse</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="bedrooms">Bedrooms</label>
+                            <select id="bedrooms" name="bedrooms">
+                                <option value="">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="bathrooms">Bathrooms</label>
+                            <select id="bathrooms" name="bathrooms">
+                                <option value="">Any</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-row">
+                        <div class="filter-group price-range">
+                            <label for="price-min">Price Range</label>
+                            <div class="price-inputs">
+                                <input type="text" id="price-min" name="price-min" placeholder="Min Price">
+                                <span>to</span>
+                                <input type="text" id="price-max" name="price-max" placeholder="Max Price">
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="sort-by">Sort By</label>
+                            <select id="sort-by" name="sort-by">
+                                <option value="newest">Newest</option>
+                                <option value="price-asc">Price (Low to High)</option>
+                                <option value="price-desc">Price (High to Low)</option>
+                                <option value="size-asc">Size (Small to Large)</option>
+                                <option value="size-desc">Size (Large to Small)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group search-button">
+                            <button type="submit" class="rounded">Search Properties</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="property-listings">
+        <div class="container">
+            <h2>Featured Properties</h2>
+            <div class="properties-grid">
+                <!-- Property 1 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt="Luxury Villa in San Francisco" />
+                        <div class="property-tag">For Sale</div>
+                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Luxury Villa with Ocean View</h3>
+                        <p class="price">$3,400,000</p>
+                        <address>
+                            480 12th, Unit 14, San Francisco, CA
+                        </address>
+                        <div class="property-specs">
+                            <span class="beds"><i class="fas fa-bed"></i> 6 beds</span>
+                            <span class="baths"><i class="fas fa-bath"></i> 4 baths</span>
+                            <span class="sqft"><i class="fas fa-vector-square"></i> 4,250 sqft.</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-date">Listed 2 days ago</span>
+                            <a href="property-detail.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 2 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_2.jpg" alt="Modern Condo in Downtown" />
+                        <div class="property-tag">For Sale</div>
+                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Modern Downtown Condo</h3>
+                        <p class="price">$1,750,000</p>
+                        <address>
+                            123 Market St, Unit 456, San Francisco, CA
+                        </address>
+                        <div class="property-specs">
+                            <span class="beds"><i class="fas fa-bed"></i> 3 beds</span>
+                            <span class="baths"><i class="fas fa-bath"></i> 2 baths</span>
+                            <span class="sqft"><i class="fas fa-vector-square"></i> 1,850 sqft.</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-date">Listed 1 week ago</span>
+                            <a href="property-detail.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 3 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_3.jpg" alt="Family Home in Berkeley" />
+                        <div class="property-tag">For Sale</div>
+                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Spacious Family Home</h3>
+                        <p class="price">$2,250,000</p>
+                        <address>
+                            789 Oak Avenue, Berkeley, CA
+                        </address>
+                        <div class="property-specs">
+                            <span class="beds"><i class="fas fa-bed"></i> 5 beds</span>
+                            <span class="baths"><i class="fas fa-bath"></i> 3 baths</span>
+                            <span class="sqft"><i class="fas fa-vector-square"></i> 3,200 sqft.</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-date">Listed 3 days ago</span>
+                            <a href="property-detail.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 4 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_4.jpg" alt="Waterfront Property" />
+                        <div class="property-tag sale">For Sale</div>
+                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Waterfront Luxury Property</h3>
+                        <p class="price">$4,500,000</p>
+                        <address>
+                            1234 Marina Blvd, San Francisco, CA
+                        </address>
+                        <div class="property-specs">
+                            <span class="beds"><i class="fas fa-bed"></i> 4 beds</span>
+                            <span class="baths"><i class="fas fa-bath"></i> 3.5 baths</span>
+                            <span class="sqft"><i class="fas fa-vector-square"></i> 3,800 sqft.</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-date">Listed 5 days ago</span>
+                            <a href="property-detail.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 5 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_5.jpg" alt="Urban Loft" />
+                        <div class="property-tag rent">For Rent</div>
+                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Urban Loft with City Views</h3>
+                        <p class="price">$5,500/month</p>
+                        <address>
+                            567 Mission St, San Francisco, CA
+                        </address>
+                        <div class="property-specs">
+                            <span class="beds"><i class="fas fa-bed"></i> 2 beds</span>
+                            <span class="baths"><i class="fas fa-bath"></i> 2 baths</span>
+                            <span class="sqft"><i class="fas fa-vector-square"></i> 1,650 sqft.</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-date">Listed 1 day ago</span>
+                            <a href="property-detail.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property 6 -->
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://onclickwebdesign.com/wp-content/uploads/property_6.jpg" alt="Classic Victorian" />
+                        <div class="property-tag">For Sale</div>
+                        <div class="property-favorite"><span class="far fa-heart"></span></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Renovated Victorian Home</h3>
+                        <p class="price">$2,850,000</p>
+                        <address>
+                            890 Hayes St, San Francisco, CA
+                        </address>
+                        <div class="property-specs">
+                            <span class="beds"><i class="fas fa-bed"></i> 4 beds</span>
+                            <span class="baths"><i class="fas fa-bath"></i> 3 baths</span>
+                            <span class="sqft"><i class="fas fa-vector-square"></i> 2,900 sqft.</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-date">Listed 2 weeks ago</span>
+                            <a href="property-detail.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Looking for something specific?</h2>
+                <p>Our agents can help you find exactly what you're looking for</p>
+                <button class="rounded">Contact an Agent</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="flex container">
+            <div class="footer-about">
+                <h5>About Stated</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+            </div>
+
+            <div class="footer-quick-links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="#">Agents</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-subscribe">
+                <h5>Subscribe to our Newsletter</h5>
+                <div id="subscribe-container">
+                    <input type="text" placeholder="Enter Email" />
+                    <button class="right-rounded">Send</button>
+                </div>
+
+                <h5 class="follow-us">Follow Us</h5>
+                <ul>
+                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <small>
+            Copyright &copy; 2023 All rights reserved | <span class="fa fa-heart"></span> 
+        </small>
+    </footer>
+</body>
+</html>
